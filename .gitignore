@@ -1,4 +1,4 @@
 **
 !.gitignore
 !process.py
-/dashpaydash/**
+!README.md
