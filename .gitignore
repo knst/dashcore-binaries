@@ -1,4 +1,6 @@
-**
+.*
 !.gitignore
+!.gitattributes
 !process.py
 !README.md
+dashpaydash
