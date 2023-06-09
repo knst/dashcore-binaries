@@ -3,15 +3,17 @@ import os
 
 version = input('Version: ')
 signed_binaries = input('Seperate unsigned binaries? y/n ') == 'y'
+print(signed_binaries)
 os.chdir(version)
 
 if not os.path.exists('debug'):
     os.mkdir('debug')
-if not os.path.exists('unsigned'):
+if not os.path.exists('unsigned') and signed_binaries:
     os.mkdir('unsigned')
 
 os.system('mv *debug* debug')
-os.system('mv *unsigned* unsigned')
+if signed_binaries:
+    os.system('mv *unsigned* unsigned')
 
 
 def process_directory(directory):
